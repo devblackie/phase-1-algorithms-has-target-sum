@@ -1,5 +1,17 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  const numTarget=[];
+
+for(let num of array){
+  const numMatch=target-num;
+  if(numMatch in numTarget){
+    return true;
+  }
+  numTarget[num]=true;
+}
+
+return false;
+
 }
 
 /* 
